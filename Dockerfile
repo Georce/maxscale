@@ -12,6 +12,8 @@ COPY MaxScale.cnf /usr/local/skysql/maxscale/etc/MaxScale.cnf
 
 COPY run.sh /run.sh
 
+RUN chmod 755 /run.sh
+
 EXPOSE 3306
 
 CMD ["/run.sh"]
